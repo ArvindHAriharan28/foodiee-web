@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HOME</title>
+
+<style>
+h1 {
+	color: blue;
+	font-family: verdana;
+	font-size: 150%;
+	text-align: center;
+}
+
+h2 {
+	color: blue;
+	font-family: verdana;
+	font-size: 100%;
+	text-align: center;
+}
+
+h3 {
+	font-family: verdana;
+	font-size: 50%;
+	button-align: center;
+}
+</style>
+</head>
+
+
+<body>
+	<h1>WELCOME!!</h1>
+	<br>
+	<br>
+	<h2>START YOUR ORDER</h2>
+	<br>
+	<br>
+	<h2>
+		<form method="post" action="CategoryServlet">
+			<input type="radio" name="category" value="Veg">VEG <input
+				type="radio" name="category" value="NonVeg">NON-VEG <input
+				type="radio" name="category" value="Snacks">SNACKS<br>
+			<br>
+			<button type="submit">GO</button>
+		</form>
+	</h2>
+	<br>
+</body>
+</html>
