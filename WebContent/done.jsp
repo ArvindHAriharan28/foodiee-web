@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,31 +9,41 @@ body  {
   background-image: url("image/veg1.jpg");
  background-repeat: no-repeat;
  background-attachment: fixed;
- background-size: 1100px 600px;
-}</style>
+ background-size: 1000px 640px;
+ background-position: right;
+ padding-left: 20px;
+ font-size:21px;
+ padding-top:90px;
+}
+table
+{
+	border-collapse:separate;
+	border-spacing: 50px 0;
+}
+th,td
+{
+	padding:10px 0;
+}
+h3
+{
+	padding-left:100px;
+}
+.button{
+	padding:20px 90px;
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Non-Veg</title>
+<title>Done</title>
 </head>
-
 <body>
-	<form action="home.html">
-		<button type="submit" value="back">Back</button>
-	</form>
-	<br>
-		<form action="food.jsp">
-		<button type="submit" value="veg">Veg</button>
-		</form>
-		<form action ="food3.jsp">
-		<button type="submit" value="snacks">Snacks</button>
-		</form>
-		
-		
-<form method="post" action="AddCart">
-		<h3>List of Items</h3>
+
+	
+
+		<h3>BILL</h3>
 
 		<table>
 			<thead>
-				<tr>
+				<tr align="left">
 
 					<th>Name</th>
 					<th>Price</th>
@@ -49,15 +59,19 @@ body  {
 						<td>${food.name}</td>
 						<td>${food.price}</td>
 
-						<td><input type="checkbox" name="foodId"
-							value="${food.id}"></td>
 					</tr>
 				</c:forEach>
 
 			</tbody>
 		</table>
-		<button type="submit" value="cart">Add Cart</button>
-	</form>
+
+		<h3>price - ${FOOD}</h3>
+		<form action="deliver.html">
+		<div class="button">
+		<button type="submit" value="quick" style="font-size:21px">QUICK</button>
+		</div>
+		</form>
+		
 
 </body>
 </html>
