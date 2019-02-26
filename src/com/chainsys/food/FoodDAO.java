@@ -12,7 +12,7 @@ public class FoodDAO {
 		ArrayList<FoodDetails> foodList = new ArrayList<FoodDetails>();
 		try {
 			Connection connection = ConnectionUtil.getConnection();
-			String sql4 = "select id,name,price from food_details where category=?";
+			String sql4 = "select id,name,price,availability from food_details where category=?";
 			PreparedStatement preparedStatement = connection
 					.prepareStatement(sql4);
 			preparedStatement.setString(1, food.getCategory());
@@ -24,6 +24,7 @@ public class FoodDAO {
 				food.setId(resultSet.getInt("id"));
 				food.setName(resultSet.getString("name"));
 				food.setPrice(resultSet.getInt("price"));
+				
 				foodList.add(food);
 			}
 			ConnectionUtil.close(connection, preparedStatement, resultSet);

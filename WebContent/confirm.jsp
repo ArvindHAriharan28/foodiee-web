@@ -44,7 +44,7 @@ padding-left:100px;
 <form method="post" action="ConfirmServlet">		
 		<h3> CONFIRM YOUR ITEMS</h3>
 		<table>
-			<thead>
+			
 				<tr align="left">
 
 					<th>Name</th>
@@ -52,7 +52,7 @@ padding-left:100px;
 
 
 				</tr>
-			</thead>
+			
 			<tbody>
 
 				<c:forEach var="food" items="${FOODS}">

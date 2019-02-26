@@ -20,7 +20,7 @@ public class CategoryServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		String category = request.getParameter("category");
-		if (category.equalsIgnoreCase("Veg")) {
+		if (category.equals("Veg")) {
 			FoodDetails food = new FoodDetails();
 			food.setCategory(category);
 			FoodDAO dao = new FoodDAO();

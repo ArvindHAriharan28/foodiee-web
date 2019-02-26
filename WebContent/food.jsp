@@ -3,7 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+
 <style>
 body {
 	background-image: url("image/veg1.jpg");
@@ -11,9 +17,10 @@ body {
 	background-attachment: fixed;
 	background-size: 1000px 640px;
 	background-position: right;
-	padding-left: 20px;
-	font-size: 21px;
-	padding-top: 90px;
+	padding-left: 5px;
+	font-size: 19px;
+	padding-top: 40px;
+
 }
 
 table {
@@ -26,7 +33,7 @@ th, td {
 }
 
 h3 {
-	padding-left: 80px;
+	padding-left: 40px;
 }
 
 .button {
@@ -41,7 +48,7 @@ h3 {
 
 
 	<form action="home.html">
-		<button type="submit" value="back">Back</button>
+		<button type="submit" value="back">Back</button><br><br>
 	</form>
 
 	<form method="post" action="AddCart">
@@ -54,7 +61,7 @@ h3 {
 
 					<th>Name</th>
 					<th>Price</th>
-
+					
 
 				</tr>
 			</thead>
@@ -65,7 +72,7 @@ h3 {
 
 						<td>${food.name}</td>
 						<td>${food.price}</td>
-
+						
 						<td><input type="checkbox" name="foodId" value="${food.id}"></td>
 					</tr>
 				</c:forEach>

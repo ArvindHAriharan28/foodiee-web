@@ -1,7 +1,6 @@
 package com.chainsys.food;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -25,7 +24,7 @@ public class ConfirmServlet extends HttpServlet {
 		if (selectedFoodId != null) {
 		int[] ids = new int[selectedFoodId.length];
 		for (int i = 0; i < selectedFoodId.length; i++) {
-			System.out.println(selectedFoodId[i]);
+			//System.out.println(selectedFoodId[i]);
 			ids[i] = Integer.parseInt(selectedFoodId[i]);
 		}
 		FoodDAO dao = new FoodDAO();
